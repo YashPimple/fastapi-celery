@@ -22,11 +22,11 @@ jobs:
     #     username: ${{ secrets.DOCKER_USERNAME }}
     #     password: ${{ secrets.DOCKER_PASSWORD }}
     
-    - name: Build and Push Docker Image
-      run: |
-        docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}:$(date +%s)
-        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker push yashpimple22/fastapi-celery:${{ github.sha }}
+    # - name: Build and Push Docker Image
+    #   run: |
+    #     docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}:$(date +%s)
+    #     docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+    #     docker push yashpimple22/fastapi-celery:${{ github.sha }}
         
     - name: Authenticate with GKE
       uses: google-github-actions/auth@v0
