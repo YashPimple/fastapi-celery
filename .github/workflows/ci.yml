@@ -35,7 +35,7 @@ jobs:
         project_id: ${{ secrets.GCP_PROJECT_ID }}
         export_default_credentials: true
 
-    - name: Configure kubectl
+    - name: Configure-kubectl
       run: |
         echo ${{ secrets.GKE_KUBE_CONFIG }} | base64 --decode > kubeconfig.yaml
         kubectl config view --flatten > mergedkubeconfig
