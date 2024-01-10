@@ -1,4 +1,4 @@
-# FastAPI with Celery
+# FastAPI with Celery Assesment
 
 > Minimal example utilizing FastAPI and Celery with RabbitMQ for task queue, Redis for Celery backend and flower for monitoring the Celery tasks.
 
