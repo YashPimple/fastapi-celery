@@ -26,7 +26,7 @@ jobs:
       run: |
         docker build . --file Dockerfile --tag ${{ secrets.DOCKER_USERNAME }}:$(date +%s)
         docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/${{ secrets.REPO }}:${{ github.sha }}
+        docker push yashpimple22/fastapi-celery:${{ github.sha }}
         
     - name: Authenticate with GKE
       uses: google-github-actions/auth@v0
