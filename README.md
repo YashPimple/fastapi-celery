@@ -9,8 +9,10 @@ This project demonstrates the deployment of a FastAPI application with Celery wo
 1. [Prerequisites](##prerequisites)
 2. [Setup and Deployment](##setup-and-deployment)
 3. [Scaling](#scaling)
-4. [Approach](##approach)
-5. [Pros & Cons](##pros)
+5. [Approach](##approach)
+6. [Pros & Cons](##pros)
+7. [Monitoring & Logging](##monitoring)
+8. [Conclusion](##conclusion)
 
 ## Prerequisites
 
@@ -30,6 +32,9 @@ docker-compose up
 ```
 This command will start the FastAPI application, Celery workers, RabbitMQ, Redis, and Celery Flower for monitoring.
 Further, open `http://localhost:8000` in your browser to interact with the FastAPI application.
+
+### Scaling
+- For the implementation of Scalability it has been done with the help of [HPA](https://github.com/YashPimple/fastapi-celery/blob/master/Manifests/fastapi-hpa.yaml)(Horizontal Pod Autoscaler). It includes scaling to 10 when there's a heavy load and scaling down to 1 based on incoming traffic and CPU Utilization within our GKE Cluster.
 
 ## Approach: Learning Through Implementation
 
@@ -65,6 +70,8 @@ Further, open `http://localhost:8000` in your browser to interact with the FastA
 3. **Autopilot Mode Constraints**:
   - Initial attempts in GKE Autopilot mode faced constraints, particularly restrictions on host ports. Shifting to a standard GKE cluster was a workaround to overcome these challenges.
 
+## Monitoring and Logging
+- For implementing monitoring and logging solutions for the application in our Kubernetes environment. We made use of Cloud Logging and Cloud Monitoring which integrates easily and lets us monitor our running GKE clusters, manage your system, and debug logs.
 
 ## Conclusion: Bridging the Knowledge Gap
 
