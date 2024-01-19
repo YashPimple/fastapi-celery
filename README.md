@@ -5,7 +5,6 @@
 This project demonstrates the deployment of a FastAPI application with Celery workers on Google Kubernetes Engine (GKE). The application uses Docker Compose for local development and a Kubernetes cluster for production deployment.
 
 ## Table of Contents
-
 1. [Prerequisites](##prerequisites)
 2. [Setup and Deployment](##setup-and-deployment)
 3. [Scaling](#scaling)
