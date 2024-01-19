@@ -17,7 +17,6 @@ This project demonstrates the deployment of a FastAPI application with Celery wo
 ## Prerequisites
 
 Ensure you have the following tools installed:
-
 - Docker
 - Docker Compose
 - Kompose
